@@ -1,12 +1,11 @@
 const express = require("express");
-//const puppeteer = require("puppeteer");
-const puppeteer = require("puppeteer-core");
+const puppeteer = require("puppeteer");
 
 const pdfkit = require("pdfkit");
 const fs = require("fs");
 const cors = require("cors");
 const path = require("path");
-
+const { Server } = require("http");
 
 const app = express();
 
@@ -29,15 +28,8 @@ app.post("/generar-pdf", async (req, res) => {
     }
 
     const browser = await puppeteer.launch({
-        executablePath: "/usr/bin/chromium",
-        headless: true,
-        args: [
-            "--no-sandbox",
-            "--disable-setuid-sandbox",
-            "--disable-gpu",
-            "--disable-dev-shm-usage",
-            "--single-process"
-        ]
+        headless: "new", // Usa la nueva implementación de headless
+        args: ["--no-sandbox", "--disable-setuid-sandbox"],
     });
 
 
