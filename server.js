@@ -5,6 +5,7 @@ const pdfkit = require("pdfkit");
 const fs = require("fs");
 const cors = require("cors");
 const path = require("path");
+const { Server } = require("http");
 
 const app = express();
 
@@ -164,8 +165,11 @@ app.post("/generar-pdf", async (req, res) => {
     });
 });
 module.exports = app;
-app.get("/", (req, res) => {
-    res.send("Servidor Express funcionando en Vercel 🚀");
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT,function(){
+    console.log("Servidor corriendo en " + PORT);
 });
 
-//app.listen(3000, () => console.log("Servidor corriendo en http://localhost:3000"));
+//app.listen(3000, () => console.log("Servidor corriendo en http://localhost:3000")); 
