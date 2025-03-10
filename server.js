@@ -29,7 +29,7 @@ app.post("/generar-pdf", async (req, res) => {
     }
 
     const browser = await puppeteer.launch({
-        executablePath: "/usr/bin/chromium-browser", // Usa Chromium preinstalado en Render
+        executablePath: "/usr/bin/chromium",
         headless: true,
         args: [
             "--no-sandbox",
