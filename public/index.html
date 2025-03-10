@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generar Carteles PDF</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Generar Carteles para Promart</h1>
+
+        <div id="sku-container">
+            <div class="sku-input">
+                <label>SKU 1:</label>
+                <input type="text" class="sku" placeholder="Ejemplo: 123456">
+                <select class="descuento">
+                    <option value="20">20%</option>
+                    <option value="60">60%</option>
+                    <option value="80">80%</option>
+                </select>
+            </div>
+            <div class="sku-input">
+                <label>SKU 2:</label>
+                <input type="text" class="sku" placeholder="Ejemplo: 123456">
+                <select class="descuento">
+                    <option value="20">20%</option>
+                    <option value="60">60%</option>
+                    <option value="80">80%</option>
+                </select>
+            </div>
+            <div class="sku-input">
+                <label>SKU 3:</label>
+                <input type="text" class="sku" placeholder="Ejemplo: 123456">
+                <select class="descuento">
+                    <option value="20">20%</option>
+                    <option value="60">60%</option>
+                    <option value="80">80%</option>
+                </select>
+            </div>
+            <div class="sku-input">
+                <label>SKU 4:</label>
+                <input type="text" class="sku" placeholder="Ejemplo: 123456">
+                <select class="descuento">
+                    <option value="20">20%</option>
+                    <option value="60">60%</option>
+                    <option value="80">80%</option>
+                </select>
+            </div>
+        </div>
+
+        <button onclick="generarPDF()">Generar PDF</button>
+        <div id="mensaje"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

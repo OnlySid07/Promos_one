@@ -1,0 +1,21 @@
+.vercel
+# Ignorar node_modules
+node_modules/
+
+# Ignorar archivos de log
+*.log
+
+# Ignorar archivos de entorno
+.env
+
+# Ignorar el directorio de compilación (build)
+build/
+
+# Ignorar directorios de configuración de IDE (Ej: VSCode)
+.vscode/
+
+# Ignorar el archivo de dependencias de lock (si no se necesita)
+package-lock.json
+
+# Ignorar el directorio de dependencias en producción
+npm-debug.log
