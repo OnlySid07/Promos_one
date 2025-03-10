@@ -160,4 +160,4 @@ app.get("/", (req, res) => {
     res.send("Servidor Express funcionando en Vercel 🚀");
 });
 
-//app.listen(3000, () => console.log("Servidor corriendo en http://localhost:3000"));
+app.listen(3000, () => console.log("Servidor corriendo en http://localhost:3000"));
