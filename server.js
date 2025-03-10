@@ -36,7 +36,7 @@ app.post("/generar-pdf", async (req, res) => {
         await page.goto(searchUrl, { waitUntil: "domcontentloaded" });
 
         try {
-            await page.waitForSelector("div.container__item--product", { timeout: 5000 });
+            await page.waitForSelector("div.container__item--product", { timeout: 60000 });
 
             const producto = await page.evaluate(() => {
                 const productElement = document.querySelector("div.container__item--product");
@@ -116,3 +116,4 @@ app.get("/", (req, res) => {
     res.send("Servidor Express funcionando en Vercel 🚀");
 });
 //app.listen(3000, () => console.log("Servidor corriendo en http://localhost:3000"));
+//"postinstall": "npx puppeteer browsers install"
